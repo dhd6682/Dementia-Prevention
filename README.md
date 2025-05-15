@@ -101,13 +101,6 @@
 OPENAI_API_KEY=your_openai_api_key
 ```
 
-## 기여 방법
-
-1. 리포지토리를 포크합니다.
-2. 새로운 브랜치를 만듭니다 (`git checkout -b feature/new-feature`).
-3. 변경 사항을 커밋합니다 (`git commit -m 'Add new feature'`).
-4. 브랜치에 푸시합니다 (`git push origin feature/new-feature`).
-5. Pull Request를 생성합니다.
 
 
 
