@@ -8,7 +8,7 @@ import json
 app = FastAPI()
 
 # OpenAI API 클라이언트 설정
-client = OpenAI(api_key='sk-proj-I0gP2ihTb6V9U9d6ntGuT3BlbkFJDRstPWfxAbgXZiI6jn13')
+client = OpenAI(api_key='API_KEY')
 
 
 # 파일 저장 경로
