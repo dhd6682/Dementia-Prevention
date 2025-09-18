@@ -8,8 +8,8 @@ mp_hands = mp.solutions.hands
 mp_drawing = mp.solutions.drawing_utils
 
 # UDP 클라이언트 설정
-udp_ip = "192.168.1.34"  # Unity 또는 다른 수신 장치의 IP 주소
-udp_port = 7777
+udp_ip = "ip-address"  # Unity 또는 다른 수신 장치의 IP 주소
+udp_port = "port-num"
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 # 웹캡 캡처 설정
