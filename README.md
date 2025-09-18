@@ -64,6 +64,11 @@
    OPENAI_API_KEY=your_openai_api_key
    ```
 
+   또는 `son2.py` 파일에서 직접 API 키를 설정할 수 있습니다:
+   ```python
+   client = OpenAI(api_key='your_actual_api_key')
+   ```
+
 4. **서버 실행**:
 
    ```bash
