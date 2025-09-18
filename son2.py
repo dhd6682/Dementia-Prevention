@@ -3,12 +3,16 @@ from openai import OpenAI
 import shutil
 from pathlib import Path
 import json
+import os
+from dotenv import load_dotenv
 
+# 환경변수 로드
+load_dotenv()
 
 app = FastAPI()
 
 # OpenAI API 클라이언트 설정
-client = OpenAI(api_key='API_KEY')
+client = OpenAI(api_key=os.getenv('OPENAI_API_KEY', 'your_api_key_here'))
 
 
 # 파일 저장 경로

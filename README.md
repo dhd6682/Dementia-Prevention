@@ -16,6 +16,17 @@
 
 "뇌 운동 프로그램"은 노인 인구의 증가와 그로 인한 건강 문제에 대한 해결책으로, 가상 환경에서 신체 및 인지 운동을 제공하는 플랫폼입니다. 사용자는 AI 기반 손동작 인식 및 음성 인식을 통해 다양한 운동 활동을 체험하고, 인지 능력 향상을 위한 프로그램에 참여할 수 있습니다. 이 프로젝트는 **FastAPI**, **OpenCV**, **MediaPipe**, **OpenAI API**를 사용하여 사용자와의 상호작용을 지원합니다.
 
+### 프로젝트 구조
+```
+Dementia-Prevention/
+├── audio_files/          # 음성 파일들 (검정.mp3, 빨강.mp3, 파랑.mp3)
+├── uploaded_files/       # 업로드된 파일 저장소
+├── request2.py          # 손동작 인식 프로그램
+├── son2.py              # 음성 인식 API 서버
+├── requirements.txt     # 필요한 라이브러리 목록
+└── README.md           # 프로젝트 설명서
+```
+
 ## 주요 AI 기능
 
 ### 1. 손동작 인식을 통한 신체 운동 (request2.py)
@@ -48,8 +59,8 @@
 1. **프로젝트 클론**:
 
    ```bash
-   git clone https://github.com/dhd6682/brain-training-ai.git
-   cd brain-training-ai
+   git clone https://github.com/dhd6682/Dementia-Prevention.git
+   cd Dementia-Prevention
    ```
 
 2. **필요한 라이브러리 설치**:
