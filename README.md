@@ -21,22 +21,22 @@
 Dementia-Prevention/
 ├── audio_files/          # 음성 파일들 (검정.mp3, 빨강.mp3, 파랑.mp3)
 ├── uploaded_files/       # 업로드된 파일 저장소
-├── request2.py          # 손동작 인식 프로그램
-├── son2.py              # 음성 인식 API 서버
+├── hand_recognition.py   # 손동작 인식 프로그램
+├── speech_recognition.py # 음성 인식 API 서버
 ├── requirements.txt     # 필요한 라이브러리 목록
 └── README.md           # 프로젝트 설명서
 ```
 
 ## 주요 AI 기능
 
-### 1. 손동작 인식을 통한 신체 운동 (request2.py)
+### 1. 손동작 인식을 통한 신체 운동 (hand_recognition.py)
 
 - **MediaPipe**와 **OpenCV**를 사용하여 사용자의 손동작을 인식합니다.
 - 손목 위치를 기준으로 각도를 계산하여 가상 환경에서의 특정 동작을 수행하도록 합니다.
 - **UDP 소켓 통신**을 통해 Unity와 연결하여 실시간으로 손동작 데이터를 전송합니다.
 - 사용자 손의 위치와 각도를 계산하여 가상 시계의 시침과 분침을 구현하고, 이를 통해 사용자가 가상 환경에서 운동을 진행할 수 있도록 합니다.
 
-### 2. 음성 인식을 통한 인지능력 향상 (son2.py)
+### 2. 음성 인식을 통한 인지능력 향상 (speech_recognition.py)
 
 - **OpenAI Whisper API**를 사용하여 업로드된 음성 파일을 텍스트로 변환합니다.
 - 변환된 텍스트와 사용자가 입력한 목표 텍스트를 비교하여 정확도를 평가합니다.
@@ -75,7 +75,7 @@ Dementia-Prevention/
    OPENAI_API_KEY=your_openai_api_key
    ```
 
-   또는 `son2.py` 파일에서 직접 API 키를 설정할 수 있습니다:
+   또는 `speech_recognition.py` 파일에서 직접 API 키를 설정할 수 있습니다:
    ```python
    client = OpenAI(api_key='your_actual_api_key')
    ```
@@ -83,13 +83,13 @@ Dementia-Prevention/
 4. **서버 실행**:
 
    ```bash
-   uvicorn son2:app --reload
+   uvicorn speech_recognition:app --reload
    ```
 
 5. **손동작 인식 실행**:
 
    ```bash
-   python request2.py
+   python hand_recognition.py
    ```
 
 ## API 설명
